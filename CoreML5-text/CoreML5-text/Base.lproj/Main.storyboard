@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v7g-q3-pzy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="n3B-qG-4S6">
+            <objects>
+                <viewController id="v7g-q3-pzy" customClass="ViewController" customModule="TextDetectionProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YKM-il-Tf3"/>
+                        <viewControllerLayoutGuide type="bottom" id="OqI-W8-YiY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QUd-mT-EMc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXw-hY-ZZ6">
+                                <rect key="frame" x="0.0" y="536" width="375" height="131"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="131" id="4d5-4I-yfz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BRU-xd-0WU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="528"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BRU-xd-0WU" secondAttribute="trailing" id="Du0-7M-xFC"/>
+                            <constraint firstItem="vXw-hY-ZZ6" firstAttribute="top" secondItem="BRU-xd-0WU" secondAttribute="bottom" constant="8" id="I4N-GO-5VY"/>
+                            <constraint firstItem="OqI-W8-YiY" firstAttribute="top" secondItem="vXw-hY-ZZ6" secondAttribute="bottom" id="VfT-IN-lR8"/>
+                            <constraint firstItem="BRU-xd-0WU" firstAttribute="top" secondItem="QUd-mT-EMc" secondAttribute="top" id="a8f-Bb-eyU"/>
+                            <constraint firstItem="BRU-xd-0WU" firstAttribute="leading" secondItem="QUd-mT-EMc" secondAttribute="leading" id="cE9-Ff-Vg7"/>
+                            <constraint firstItem="vXw-hY-ZZ6" firstAttribute="leading" secondItem="QUd-mT-EMc" secondAttribute="leading" id="yQ2-HM-2IJ"/>
+                            <constraint firstAttribute="trailing" secondItem="vXw-hY-ZZ6" secondAttribute="trailing" id="z5C-oT-ZVa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JpW-j7-tYW"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="vXw-hY-ZZ6" id="fsB-D0-NT6"/>
+                        <outlet property="textImageView" destination="BRU-xd-0WU" id="m7E-wD-Z42"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mft-ud-98m" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="text.jpg" width="700" height="700"/>
+    </resources>
+</document>
